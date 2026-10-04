@@ -1,0 +1,14 @@
+schema = 1
+id = "spotify"
+name = "Spotify"
+version = "0.1.0"
+description = "Now playing and playback controls for the Spotify desktop app. No login."
+icon = "wave"
+host = "src/host.luau"
+window = "src/window.luau"
+styles = ["styles/player.css", "styles/controls.css", "styles/pip.css"]
+
+[[blocks]]
+id = "player"
+title = "Spotify"
+icon = "wave"

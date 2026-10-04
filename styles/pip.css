@@ -1,0 +1,149 @@
+.tn-pane.pip [data-surface='plugin.spotify.player'] {
+	&.sf-dock {
+		display: none;
+	}
+	&.sf-main {
+		flex: 1 1 auto;
+		height: auto;
+		margin: -10px;
+		max-height: none;
+		overflow: hidden;
+		padding: 0;
+	}
+	[data-role~='spotify-player'] {
+		color: #fff;
+		font-family: var(--sans);
+		gap: 4px;
+		height: 100%;
+		justify-content: flex-end;
+		max-width: none;
+		overflow: hidden;
+		padding-bottom: 10px;
+		padding-left: 14px;
+		padding-right: 14px;
+		padding-top: 0;
+		position: relative;
+	}
+	[data-role~='spotify-player__scrim'] {
+		background: linear-gradient(rgb(0 0 0 / 0%), rgb(0 0 0 / 62%) 30%, rgb(0 0 0 / 86%));
+		bottom: 0;
+		display: flex;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		right: 0;
+		top: 34%;
+	}
+	[data-role~='spotify-player__hero'],
+	[data-role~='spotify-player__progress'],
+	[data-role~='spotify-player__controls'] {
+		position: relative;
+	}
+	[data-role~='spotify-player__backdrop'] {
+		display: block;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+
+		.sf-img,
+		.sf-img-frame {
+			border-radius: 0;
+			box-shadow: none;
+			height: auto;
+			max-width: none;
+			width: 100%;
+		}
+		&[data-role~='spotify-player__cover--empty'] {
+			bottom: 0;
+			display: grid;
+			top: 0;
+			transform: none;
+		}
+	}
+	[data-role~='spotify-player__art'],
+	[data-role~='spotify-player__album'],
+	[data-role~='spotify-player__lower'] {
+		display: none;
+	}
+	[data-role~='spotify-player__hero'] {
+		gap: 0;
+	}
+	[data-role~='spotify-player__meta'] {
+		gap: 1px;
+	}
+	[data-role~='spotify-player__title'] {
+		font-size: 1.2em;
+		font-weight: 700;
+		line-height: 1.2;
+	}
+	[data-role~='spotify-player__artist'] {
+		font-size: 0.95em;
+	}
+	[data-role~='spotify-player__title'],
+	[data-role~='spotify-player__artist'] {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	[data-role~='spotify-player'] {
+		.sf-text {
+			color: #fff;
+			font-family: var(--sans);
+			font-weight: 500;
+		}
+		.sf-t-strong {
+			color: #fff;
+			font-weight: 700;
+		}
+		[data-role~='spotify-player__artist'].sf-text {
+			color: rgb(255 255 255 / 90%);
+			font-weight: 600;
+		}
+		.sf-t-muted {
+			color: rgb(255 255 255 / 88%);
+			font-weight: 600;
+		}
+	}
+	[data-role~='spotify-player__progress'] {
+		font-size: 0.85em;
+		gap: 6px;
+	}
+	[data-role~='spotify-player__time'] {
+		min-width: 30px;
+	}
+	[data-role~='spotify-player__cell'] {
+		background: rgb(255 255 255 / 28%);
+
+		&[data-tone='accent'] {
+			background: #fff;
+		}
+	}
+	[data-role~='spotify-player__controls'] {
+		gap: 4px;
+		justify-content: space-between;
+	}
+	[data-role~='spotify-player__button'] {
+		--spotify-button-hover-background: rgb(255 255 255 / 16%);
+		--spotify-button-hover-color: #fff;
+		color: rgb(255 255 255 / 85%);
+
+		&:hover {
+			background: var(--spotify-button-hover-background);
+			color: var(--spotify-button-hover-color);
+		}
+		&[data-tone='accent'] {
+			background: rgb(255 255 255 / 22%);
+			color: #fff;
+		}
+	}
+	[data-role~='spotify-player__button--play'] {
+		--spotify-button-hover-background: #fff;
+		--spotify-button-hover-color: #000;
+		--spotify-play-size: 36px;
+		background: #fff;
+		color: #000;
+	}
+}

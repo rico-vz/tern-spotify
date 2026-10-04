@@ -1,0 +1,92 @@
+[data-surface='plugin.spotify.player'] {
+	--spotify-button-icon: 18px;
+	--spotify-play-icon: 20px;
+	--spotify-play-size: 42px;
+
+	[data-role~='spotify-player__controls'] {
+		align-items: center;
+		gap: 22px;
+		justify-content: center;
+	}
+	[data-role~='spotify-player__lower'] {
+		align-items: center;
+		gap: 16px;
+		justify-content: space-between;
+
+		> [data-role~='spotify-player__volume'] {
+			flex: 1 1 auto;
+			min-width: 0;
+		}
+	}
+	[data-role~='spotify-player__tools'] {
+		flex: none;
+		gap: 4px;
+	}
+
+	[data-role~='spotify-player__button'] {
+		--spotify-button-hover-background: var(--sf-shade);
+		--spotify-button-hover-color: var(--t1);
+		align-items: center;
+		border-radius: 999px;
+		color: var(--t2);
+		cursor: pointer;
+		flex: none;
+		gap: 1px;
+		justify-content: center;
+		padding: 6px;
+		transition:
+			background 0.12s var(--ease),
+			color 0.12s var(--ease),
+			transform 0.08s var(--ease);
+
+		&:hover {
+			background: var(--spotify-button-hover-background);
+			color: var(--spotify-button-hover-color);
+		}
+		&:active {
+			transform: scale(0.92);
+		}
+		&[data-tone='accent'] {
+			color: var(--accent);
+		}
+		&[data-tone='muted'] {
+			cursor: default;
+			opacity: 0.35;
+		}
+		.sf-icon,
+		.ico {
+			height: var(--spotify-button-icon);
+			width: var(--spotify-button-icon);
+		}
+		.sf-text {
+			font-size: 0.75em;
+			line-height: 1;
+		}
+		> * {
+			pointer-events: none;
+		}
+	}
+	[data-role~='spotify-player__button--play'] {
+		--spotify-button-hover-background: var(--accent);
+		--spotify-button-hover-color: #fff;
+		background: var(--accent);
+		color: #fff;
+		height: var(--spotify-play-size);
+		padding: 0;
+		width: var(--spotify-play-size);
+
+		&:hover {
+			box-shadow: 0 0 0 4px rgb(from var(--accent) r g b / 22%);
+		}
+		.sf-icon,
+		.ico {
+			height: var(--spotify-play-icon);
+			width: var(--spotify-play-icon);
+		}
+	}
+
+	/* ideally tern lets a click go through without enlarging a pip in the future */
+	[data-role~='spotify-u-interactive'] {
+		pointer-events: auto;
+	}
+}
