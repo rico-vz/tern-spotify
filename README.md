@@ -16,6 +16,12 @@ For development, use `tern plugin link /path/to/tern-spotify` instead.
 Requires Windows 10+ with PowerShell 5.1 and Windows Script Host, macOS automation
 permission, or Linux with [`playerctl`](https://github.com/altdesktop/playerctl).
 
+## Preview
+
+![Floating Spotify player with cover art and playback controls](assets/preview-pip.png)
+
+![Docked Spotify player with track details, playback and volume controls](assets/preview-docked.png)
+
 ## Controls
 
 With the player focused:
