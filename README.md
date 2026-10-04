@@ -6,7 +6,7 @@ controls. Needs the Spotify Desktop to be app running.
 ## Install
 
 ```sh
-tern plugin install /path/to/tern-spotify
+tern plugin install https://github.com/rico-vz/tern-spotify
 ```
 
 To use it, open the command palette in Tern and run **Spotify: Open player**. 
