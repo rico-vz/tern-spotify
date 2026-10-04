@@ -1,6 +1,6 @@
 # Spotify for Tern
 
-Control Spotify through using Tern, with cover art, playback and volume
+Control Spotify through using [Tern](https://stencil.so/tern), with cover art, playback and volume
 controls. Needs the Spotify Desktop to be app running.
 
 ## Install
