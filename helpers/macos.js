@@ -67,7 +67,7 @@ function movePath(from, to) {
 function mkdir(path, intermediates) {
   try {
     return !!fm().createDirectoryAtPathWithIntermediateDirectoriesAttributesError(
-      path, !!intermediates, null, $());
+      path, !!intermediates, $(), $());
   } catch (e) { return false; }
 }
 
